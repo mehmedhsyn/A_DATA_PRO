@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bundesliga</title>
+</head>
+<body>
+    <center>
+    <h1>All Matches Of The Actual Season</h1>
+    <hr/>
+    <table border = "1">
+        <tr>
+            <th>NO</th>
+            <th>Team1</th>
+            <th>Team2</th>
+            <th>Data</th>
+        </tr>
+        {% for result in data %}
+        <tr>
+            <td>{{result.id}}</td>
+            <td>{{result.team1}}</td>
+            <td>{{result.team2}}</td>
+            <td>{{result.data}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
+
