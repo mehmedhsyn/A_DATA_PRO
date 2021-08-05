@@ -12,4 +12,11 @@ class CrawlerItem(scrapy.Item):
     Team1 = scrapy.Field()
     Team2 = scrapy.Field()
     Data = scrapy.Field()
-    
+
+class NextItem(scrapy.Item):
+    Team1 = scrapy.Field()
+    Team2 = scrapy.Field()
+    Data = scrapy.Field()
+
+
+

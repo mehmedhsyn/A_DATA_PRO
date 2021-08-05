@@ -11,11 +11,11 @@ class AllMactchSpider(scrapy.Spider):           #klas
 
     def parse(self, response):                 #metod
         item = CrawlerItem()                               #importvame klasa carawleritem() v item    
-        jsonresponse = response.json()            #nz
+        jsonresponse = response.json()            
         
         for AllMatches in jsonresponse:                  #cikul 
 
-            item["Team1"] = AllMatches["team1"]["teamName"]    #vurti item postoqnno za da nameri danni na ime team1
+            item["Team1"] = AllMatches["team1"]["teamName"]    #vurti item postoqnno za da nameri danni na ime team1..
             item["Team2"] = AllMatches["team2"]["teamName"]
             item["Data"] =  AllMatches["matchDateTime"]
             
@@ -25,6 +25,7 @@ class AllMactchSpider(scrapy.Spider):           #klas
         print("--------------------------")
 
         
+
 
         #response.json()[0]["team1"]
         
