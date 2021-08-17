@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bundesliga</title>
+</head>
+<body>
+    <center>
+    <h1 style="color:White;">All Matches Of The Actual Season</h1>
+    <h3><a href = http://127.0.0.1:8000/Next_Upcoming_Matches><button type="button">Next Upcoming Matches</button></a></h3>
+    <h3><a href = http://127.0.0.1:8000/Win_Lose><button type="button">Team Ranking</button></a></h3>   
+    <hr/>
+                   
+    <table style="color:white" bordercolor= "white" border = "1">
+        <tr>
+            <th>NO</th>
+            <th>Team1</th>
+            <th>Team2</th>
+            <th>Data</th>
+        </tr>
+        {% for Allmatchs in object_list %}
+        <tr style="color:white">
+            <td>{{Allmatchs.id}}</td>
+            <td>{{Allmatchs.team1}}</td>
+            <td>{{Allmatchs.team2}}</td>
+            <td>{{Allmatchs.data}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
+
+<style>                            
+    hr {           
+border: 1px solid white;
+ }
+    body {
+            background-image: linear-gradient(to right, rgb(254,225,64) 0%, rgb(250,112,154) 100%);
+   }
+
+   button {
+  background-color:transparent; 
+  color: white; 
+  border: 2px solid white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+</style>
